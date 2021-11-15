@@ -15,7 +15,8 @@ typedef struct{
 
 typedef struct{
 	bool bOpen;
-	PF_FileHandle fileHandle;
+	// PF_FileHandle fileHandle;
+	int fileID;
 	IX_FileHeader fileHeader;
 }IX_IndexHandle;
 
@@ -29,7 +30,7 @@ typedef struct{
 }IX_Node;
 
 typedef struct{
-	bool bOpen;		/*扫描是否打开 */
+	bool bOpen;		/*扫描是1否打开 */
 	IX_IndexHandle *pIXIndexHandle;	//指向索引文件操作的指针
 	CompOp compOp;  /* 用于比较的操作符*/
 	char *value;		 /* 与属性行比较的值 */

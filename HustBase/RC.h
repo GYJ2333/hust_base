@@ -71,9 +71,12 @@ typedef enum{
 	INDEX_CREATE_FAILED,	//索引创建失败
 	INDEX_DELETE_FAILED,	//索引删除失败
 	GET_INDEX_TREE_FAILED,	//获取索引树失败
-	ILLEGAL_INDEX_TREE		//索引树与预期不一致
+	ILLEGAL_INDEX_TREE,		//索引树与预期不一致
 	
 	/*如需新增错误码，请从下一行开始添加，不要在前面插入，以免AutoTest程序判断错误。*/
+	ILLEGAL_COMPOP, //不合法的操作符
+	EMPTY_VALUE, //空比较值
+	ILLEGAL_INDEX_HANDLE //不合法的索引指针
 
 }RC;
 
