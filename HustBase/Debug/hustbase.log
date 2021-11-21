@@ -1,79 +1,14 @@
-﻿生成启动时间为 2020/9/9 11:09:30。
-     1>项目“D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\hustbase.vcxproj”在节点 2 上(rebuild 个目标)。
-       项目文件包含 ToolsVersion="15.0"。此工具集可能未知或缺失。在这种情况下，通过安装 MSBuild 的正确版本，或许可以解决此问题。否则，该 build 可能已因策略原因而被强制为某个特定 ToolsVersion。将该项目视为其已具有 ToolsVersion="4.0"。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=291333。
-     1>_PrepareForClean:
-         正在删除文件“Debug\hustbase.lastbuildstate”。
-       InitializeBuildStatus:
-         正在创建“Debug\hustbase.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D HUSTBASE_EXPORTS /D _WINDOWS /D _USRDLL /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"Debug\HustBase.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt pch.cpp
-         pch.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D HUSTBASE_EXPORTS /D _WINDOWS /D _USRDLL /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DBTest.cpp dllmain.cpp IX_Manager.cpp PF_Manager.cpp QU_Manager.cpp RM_Manager.cpp SYS_Manager.cpp
-         SYS_Manager.cpp
-         RM_Manager.cpp
-         QU_Manager.cpp
-         PF_Manager.cpp
-     1>d:\教学资料\系统能力综合培养\2020\hustbase-framework(2020)\hustbase\pf_manager.cpp(233): warning C4018: “<=”: 有符号/无符号不匹配
-     1>d:\教学资料\系统能力综合培养\2020\hustbase-framework(2020)\hustbase\pf_manager.cpp(234): warning C4018: “<=”: 有符号/无符号不匹配
-     1>d:\教学资料\系统能力综合培养\2020\hustbase-framework(2020)\hustbase\pf_manager.cpp(243): warning C4018: “<=”: 有符号/无符号不匹配
-         IX_Manager.cpp
-         dllmain.cpp
-         DBTest.cpp
-         正在生成代码...
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D HUSTBASE_EXPORTS /D _WINDOWS /D _USRDLL /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt lex.yy.c parse.c yacc_sql.tab.c
-         yacc_sql.tab.c
-     1>yacc_sql.tab.c(363): warning C4273: “malloc”: dll 链接不一致
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdlib.h(600) : 参见“malloc”的前一个定义
-     1>yacc_sql.tab.c(370): warning C4273: “free”: dll 链接不一致
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdlib.h(599) : 参见“free”的前一个定义
-         parse.c
-     1>d:\教学资料\系统能力综合培养\2020\hustbase-framework(2020)\hustbase\parse.c(85): warning C4013: “yy_switch_to_buffer”未定义；假设外部返回 int
-     1>d:\教学资料\系统能力综合培养\2020\hustbase-framework(2020)\hustbase\parse.c(85): warning C4013: “yy_scan_string”未定义；假设外部返回 int
-         lex.yy.c
-     1>lex.yy.c(1694): warning C4013: “exit”未定义；假设外部返回 int
-     1>lex.yy.c(1757): warning C4013: “malloc”未定义；假设外部返回 int
-     1>lex.yy.c(1775): warning C4013: “realloc”未定义；假设外部返回 int
-     1>lex.yy.c(1785): warning C4013: “free”未定义；假设外部返回 int
-         正在生成代码...
-       ManifestResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\HustBase.dll.embed.manifest.res" Debug\HustBase_manifest.rc 
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\Debug\HustBase.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"hustbase.def" /MANIFEST /ManifestFile:"Debug\HustBase.dll.intermediate.manifest" /MANIFESTUAC:NO /DEBUG /PDB:"D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\Debug\HustBase.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\Debug\HustBase.lib" /MACHINE:X86 /DLL Debug\HustBase.dll.embed.manifest.res
-         Debug\DBTest.obj
-         Debug\dllmain.obj
-         Debug\IX_Manager.obj
-         Debug\lex.yy.obj
-         Debug\parse.obj
-         Debug\pch.obj
-         Debug\PF_Manager.obj
-         Debug\QU_Manager.obj
-         Debug\RM_Manager.obj
-         Debug\SYS_Manager.obj
-         Debug\yacc_sql.tab.obj
-            正在创建库 D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\Debug\HustBase.lib 和对象 D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\Debug\HustBase.exp
-       Manifest:
-         正在删除文件“Debug\HustBase.dll.embed.manifest”。
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\HustBase.dll.embed.manifest" /manifest Debug\HustBase.dll.intermediate.manifest
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\HustBase.dll.embed.manifest.res" Debug\HustBase_manifest.rc 
-       LinkEmbedManifest:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\Debug\HustBase.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"hustbase.def" /MANIFEST /ManifestFile:"Debug\HustBase.dll.intermediate.manifest" /MANIFESTUAC:NO /DEBUG /PDB:"D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\Debug\HustBase.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\Debug\HustBase.lib" /MACHINE:X86 /DLL Debug\HustBase.dll.embed.manifest.res
-         Debug\DBTest.obj
-         Debug\dllmain.obj
-         Debug\IX_Manager.obj
-         Debug\lex.yy.obj
-         Debug\parse.obj
-         Debug\pch.obj
-         Debug\PF_Manager.obj
-         Debug\QU_Manager.obj
-         Debug\RM_Manager.obj
-         Debug\SYS_Manager.obj
-         Debug\yacc_sql.tab.obj
-         hustbase.vcxproj -> D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\Debug\HustBase.dll
-       FinalizeBuildStatus:
-         正在删除文件“Debug\hustbase.unsuccessfulbuild”。
-         正在对“Debug\hustbase.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“D:\教学资料\系统能力综合培养\2020\HustBase-framework(2020)\hustbase\hustbase.vcxproj”(rebuild 个目标)的操作。
-
-生成成功。
-
-已用时间 00:00:03.78
+﻿  SYS_Manager.cpp
+d:\qq\hustbase-zgs\hustbase\rm_manager.h(50): warning C4101: “recordPerPage”: 未引用的局部变量
+d:\qq\hustbase-zgs\hustbase\rm_manager.h(52): warning C4101: “pFirstRecord”: 未引用的局部变量
+d:\qq\hustbase-zgs\hustbase\rm_manager.h(53): warning C4101: “pLastRecord”: 未引用的局部变量
+d:\qq\hustbase-zgs\hustbase\rm_manager.h(49): warning C4101: “recordSize”: 未引用的局部变量
+d:\qq\hustbase-zgs\hustbase\rm_manager.h(51): warning C4101: “firstEmptyPage”: 未引用的局部变量
+d:\qq\hustbase-zgs\hustbase\rm_manager.h(48): warning C4101: “FileID”: 未引用的局部变量
+d:\qq\hustbase-zgs\hustbase\sys_manager.cpp(106): warning C4101: “rc”: 未引用的局部变量
+d:\qq\hustbase-zgs\hustbase\sys_manager.cpp(123): warning C4101: “rc”: 未引用的局部变量
+d:\qq\hustbase-zgs\hustbase\sys_manager.cpp(519): warning C4018: “>”: 有符号/无符号不匹配
+d:\qq\hustbase-zgs\hustbase\sys_manager.cpp(80): warning C4715: “execute”: 不是所有的控件路径都返回值
+d:\qq\hustbase-zgs\hustbase\sys_manager.cpp(389): warning C4715: “CreateIndex”: 不是所有的控件路径都返回值
+d:\qq\hustbase-zgs\hustbase\sys_manager.cpp(425): warning C4715: “DropIndex”: 不是所有的控件路径都返回值
+  hustbase.vcxproj -> D:\qq\HustBase-zgs\hustbase\Debug\HustBase.dll

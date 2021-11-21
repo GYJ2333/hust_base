@@ -36,29 +36,23 @@ typedef enum{
 	IX_NOMOREIDXINMEM,
 	IX_SCANOPENNED,
 	FAIL,
-
 	DB_EXIST,			//数据库已存在
 	DB_NOT_EXIST,		//数据库不存在
 	NO_DB_OPENED,		//数据库未打开
-
 	TABLE_NOT_EXIST,	//表不存在
 	TABLE_EXIST,		//表已存在
 	TABLE_NAME_ILLEGAL,	//表名非法
-
 	FLIED_NOT_EXIST,	//字段不存在
 	FLIED_EXIST,		//字段已存在add by xmy 20191216
 	FIELD_NAME_ILLEGAL,	//字段名非法
 	FIELD_MISSING,		//插入值中的字段不足
 	FIELD_REDUNDAN,		//插入值中的字段太多
 	FIELD_TYPE_MISMATCH,//插入值的字段类型不匹配
-
 	RECORD_NOT_EXIST,	//对一条不存在的记录进行删改时
-
 	INDEX_NAME_REPEAT,	//索引名重复
 	INDEX_EXIST,		//在指定字段上已存在索引
 	INDEX_NOT_EXIST,	//索引不存在
 	INDEX_NAME_ILLEGAL,	//索引名非法add by xmy 20191216
-
 	//以下返回码由Autotest程序使用
 	ABNORMAL_EXIT,			//异常退出
 	DATABASE_FAILED,		//数据库创建或删除失败
@@ -74,6 +68,7 @@ typedef enum{
 	ILLEGAL_INDEX_TREE,		//索引树与预期不一致
 	
 	/*如需新增错误码，请从下一行开始添加，不要在前面插入，以免AutoTest程序判断错误。*/
+
 	ILLEGAL_COMPOP, //不合法的操作符
 	EMPTY_VALUE, //空比较值
 	ILLEGAL_INDEX_HANDLE //不合法的索引指针
