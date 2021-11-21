@@ -28,5 +28,20 @@ RC Insert(char *relName,int nValues,Value * values);
 RC Delete(char *relName,int nConditions,Condition *conditions);
 RC Update(char *relName,char *attrName,Value *value,int nConditions,Condition *conditions);
 
+typedef struct SysTables {
+	char tablename[21];
+	int attrcount;
+}SysTable;
+
+typedef struct SysColumns {
+	char tablename[21];//表名
+	char attrname[21];//列名
+	int attrtype;//列类型
+	int attrlength;//长度
+	int attroffset;//记录中该列的偏移量
+	char ix_flag;//该列是否有索引，'1'有索引，'0'无索引
+	char indexname[21];
+
+}SysColumn;
 
 #endif

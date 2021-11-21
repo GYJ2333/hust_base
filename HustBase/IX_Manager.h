@@ -53,7 +53,7 @@ typedef struct{
 	Tree_Node  *root;	//B+树的根节点
 }Tree;
 
-RC CreateIndex(const char * fileName,AttrType attrType,int attrLength);
+RC CreateIndexFile(const char * fileName,AttrType attrType,int attrLength);
 RC OpenIndex(const char *fileName,IX_IndexHandle *indexHandle);
 RC CloseIndex(IX_IndexHandle *indexHandle);
 

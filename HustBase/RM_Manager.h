@@ -16,7 +16,9 @@ typedef struct {
 	bool bValid;		 // False表示还未被读入记录
 	RID  rid; 		 // 记录的标识符 
 	char *pData; 		 //记录所存储的数据 
+	RID  nextRid; //下一个记录的信息
 }RM_Record;
+
 
 
 typedef struct
@@ -32,11 +34,23 @@ typedef struct
 
 typedef struct __RM_FileHandle {//文件句柄
 	bool bOpen;//句柄是否打开（是否正在被使用）
+	int FileID;		//此记录表对应的页面文件,ID与其对应的文件句柄存在映射关系
+	int recordSize;			//记录表中记录的长度
+	int recordPerPage;		//记录表中一页可用的记录数
+	int firstEmptyPage;		//记录第一个空白页码
+	RID* pFirstRecord;		//记录第一个有效记录的RID
+	RID* pLastRecord;		//记录最后一个有效记录的RID
 	//TODO: 需要自定义其内部结构
 	__RM_FileHandle() 
 	{
 		bOpen = false;
 		// TODO: 添加需要初始话代码
+		int FileID;		//此记录表对应的页面文件,ID与其对应的文件句柄存在映射关系
+		int recordSize;			//记录表中记录的长度
+		int recordPerPage;		//记录表中一页可用的记录数
+		int firstEmptyPage;		//记录第一个空白页码
+		RID* pFirstRecord;		//记录第一个有效记录的RID
+		RID* pLastRecord;		//记录最后一个有效记录的RID
 	}
 
 }RM_FileHandle;

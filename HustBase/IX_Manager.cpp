@@ -7,7 +7,7 @@
 	attrLength：索引的长度
 */
 
-RC CreateIndex(const char * fileName, AttrType attrType, int attrLength)
+RC CreateIndexFile(const char * fileName, AttrType attrType, int attrLength)
 {
 	// 创建一个文件
 	RC rc = CreateFile(fileName);
@@ -56,15 +56,15 @@ RC CreateIndex(const char * fileName, AttrType attrType, int attrLength)
 	index_Node.rids = NULL;
 
 	// 获取第一页的数据区
-	char** pageData;
-	rc = GetData(pageHandle, pageData);
+	char* pageData;
+	rc = GetData(pageHandle, &pageData);
 	if (rc != SUCCESS) {
 		return rc;
 	}
 
 	// 填充第一页的数据区，并刷新磁盘存储
-	memcpy(*pageData, &index_fileHeader, sizeof(IX_FileHeader));
-	memcpy(*pageData + sizeof(IX_FileHeader), &index_Node, sizeof(IX_Node));
+	memcpy(pageData, &index_fileHeader, sizeof(IX_FileHeader));
+	memcpy(pageData + sizeof(IX_FileHeader), &index_Node, sizeof(IX_Node));
 	rc = MarkDirty(pageHandle);
 	if (rc != SUCCESS) {
 		return rc;
@@ -104,13 +104,13 @@ RC OpenIndex(const char * fileName, IX_IndexHandle * indexHandle)
 	}
 
 	// 获取数据区，并取出索引控制信息
-	char** pageData;
-	rc = GetData(pageHandle, pageData);
+	char* pageData;
+	rc = GetData(pageHandle, &pageData);
 	if (rc != SUCCESS) {
 		return rc;
 	}
 
-	indexHandle->fileHeader = *(IX_FileHeader*)(*pageData);
+	indexHandle->fileHeader = *(IX_FileHeader*)pageData;
 	
 	// 释放资源
 	rc = UnpinPage(pageHandle);
